@@ -20,21 +20,24 @@ header{
 }
 
 .logo{
-  width:120px;
+  width:130px;
   margin-bottom:15px;
+  background:#fff;
+  padding:10px;
+  border-radius:14px;
   animation:logoAnim 3s infinite ease-in-out;
 }
 
 @keyframes logoAnim{
   0%{transform:scale(.85);opacity:0;}
   50%{transform:scale(1.1);opacity:1;}
-  100%{transform:scale(1);opacity:.9;}
+  100%{transform:scale(1);opacity:.95;}
 }
 
 header h1{
-  font-size:42px;
-  color:#ff4d4d;
+  font-size:40px;
   margin:0;
+  color:#ff4d4d;
 }
 
 header p{
@@ -111,30 +114,16 @@ footer p{color:#ddd;}
   margin:6px;
   font-size:18px;
 }
-
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.9);
-  align-items:center;
-  justify-content:center;
-}
-
-.modal img{
-  max-width:90%;
-  max-height:90%;
-  border-radius:12px;
-}
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" class="logo" alt="ভাই ভাই ক্লথ স্টোর">
+  <!-- IMPORTANT: ./logo.png -->
+  <img src="./logo.png" alt="ভাই ভাই ক্লথ স্টোর লোগো" class="logo">
   <h1>ভাই ভাই ক্লথ স্টোর</h1>
-  <p>বিশ্বাসের সাথে পাইকারী ও খুচরা কাপড়</p>
+  <p>বিশ্বাসের সাথে পাইকারী ও খুচরা কাপড়ের বিশ্বস্ত প্রতিষ্ঠান</p>
 </header>
 
 <div class="container">
@@ -152,7 +141,7 @@ footer p{color:#ddd;}
   </div>
 
   <div class="wholesale">
-    👉 সকল পণ্য পাইকারী ও খুচরা বিক্রয় করা হয়
+    👉 উপরোক্ত সকল পণ্য পাইকারী ও খুচরা বিক্রয় করা হয়
   </div>
 </div>
 
