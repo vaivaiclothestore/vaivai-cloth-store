@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>মেসার্স ভাই ভাই ক্লথ স্টোর | কেরানীহাট</title>
+<title>ভাই ভাই ক্লথ স্টোর | কেরানীহাট, চট্টগ্রাম</title>
 
 <style>
 body{
@@ -23,7 +23,7 @@ header{
 /* LOGO */
 .logo{
   width:140px;
-  background:#000;
+  background:#000;              /* সাদা → কালো */
   padding:25px;
   border-radius:22px;
   box-shadow:0 0 25px rgba(255,0,0,.6);
@@ -31,14 +31,23 @@ header{
 }
 
 @keyframes logoPulse{
-  0%{transform:scale(.9);box-shadow:0 0 10px rgba(255,0,0,.4);}
-  50%{transform:scale(1.08);box-shadow:0 0 35px rgba(0,255,0,.8);}
-  100%{transform:scale(.9);box-shadow:0 0 10px rgba(255,0,0,.4);}
+  0%{
+    transform:scale(.9);
+    box-shadow:0 0 10px rgba(255,0,0,.4);
+  }
+  50%{
+    transform:scale(1.08);
+    box-shadow:0 0 35px rgba(0,255,0,.8);
+  }
+  100%{
+    transform:scale(.9);
+    box-shadow:0 0 10px rgba(255,0,0,.4);
+  }
 }
 
 header h1{
   margin:20px 0 10px;
-  font-size:38px;
+  font-size:42px;
   color:#ff4d4d;
 }
 
@@ -49,36 +58,62 @@ header p{
 
 /* CONTAINER */
 .container{
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
-  padding:30px 20px;
+  padding:30px 15px;
 }
 
-.section{
+.section-title{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:25px;
+  color:gold;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+
+.product{
   background:#111;
-  border-radius:16px;
-  padding:25px;
+  border-radius:14px;
+  padding:18px;
+  text-align:center;
   box-shadow:0 6px 20px rgba(0,0,0,.7);
+  transition:.35s;
 }
 
-.section p{
+.product:hover{
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 12px 30px rgba(255,215,0,.4);
+}
+
+.product span{
+  display:block;
+  padding:12px;
+  border-radius:10px;
+  background:#1abc9c;
   font-size:18px;
-  line-height:1.8;
-  color:#eee;
+  font-weight:600;
+  color:#000;
 }
 
-.section ul{
-  margin-top:15px;
-}
+.product.blue span{background:#3498db;}
+.product.orange span{background:#f39c12;}
+.product.green span{background:#2ecc71;}
 
-.section li{
-  margin:8px 0;
-  font-size:18px;
+/* WHOLESALE */
+.wholesale{
+  margin:50px 0 30px;
+  text-align:center;
+  font-size:20px;
 }
 
 /* FOOTER */
 footer{
-  margin-top:40px;
   background:#111;
   padding:25px 15px;
   text-align:center;
@@ -96,8 +131,8 @@ footer p{
 .contact a{
   color:#25D366;
   text-decoration:none;
-  display:inline-block;
   margin:6px;
+  display:inline-block;
   font-size:18px;
 }
 </style>
@@ -106,44 +141,41 @@ footer p{
 <body>
 
 <header>
-  <img src="logo.png" alt="মেসার্স ভাই ভাই ক্লথ স্টোর লোগো" class="logo">
-  <h1>মেসার্স ভাই ভাই ক্লথ স্টোর</h1>
-  <p>কেরানীহাটের বিশ্বস্ত কাপড়ের ঠিকানা</p>
+  <img src="logo.png" alt="ভাই ভাই ক্লথ স্টোর লোগো" class="logo">
+  <h1>ভাই ভাই ক্লথ স্টোর</h1>
+  <p>বিশ্বাসের সাথে পাইকারী ও খুচরা কাপড়ের বিশ্বস্ত প্রতিষ্ঠান</p>
 </header>
 
 <div class="container">
-  <div class="section">
-    <p>
-      <strong>বিসমিল্লাহির রাহমানির রাহিম।</strong><br><br>
-      আপনার উৎসবের রঙকে আরও রাঙিয়ে তুলতে চলে আসুন কেরানীহাটের বিশ্বস্ত নাম—
-      <strong>মেসার্স ভাই ভাই ক্লথ স্টোর</strong>-এ।
-      আমাদের এখানে পাবেন নজরকাড়া সব পোশাকের সমাহার:
-    </p>
+  <h2 class="section-title">আমাদের পণ্যসমূহ</h2>
 
-    <ul>
-      <li>বিয়ের শাড়ী ও পার্টি শাড়ী</li>
-      <li>টাঙ্গাইল ও পাবনা শাড়ী</li>
-      <li>এক্সক্লুসিভ থ্রি-পিস</li>
-      <li>হোসিয়ারী, লুঙ্গি-গামছা, টাওয়াল ও থান কাপড়</li>
-    </ul>
+  <div class="products">
+    <div class="product"><span>বিয়ের শাড়ী</span></div>
+    <div class="product blue"><span>পাটি শাড়ী</span></div>
+    <div class="product orange"><span>টাঙ্গাইল শাড়ী</span></div>
+    <div class="product green"><span>পাবনা শাড়ী</span></div>
+    <div class="product"><span>হোসিয়ারী</span></div>
+    <div class="product blue"><span>লুঙ্গি / গামছা</span></div>
+    <div class="product orange"><span>থান কাপড়</span></div>
+    <div class="product green"><span>থ্রি পিস</span></div>
+  </div>
 
-    <p>
-      পাইকারী মূল্যে সেরা মানের পোশাক নিতে আজই চলে আসুন আমাদের দোকানে।
-    </p>
+  <div class="wholesale">
+    👉 উপরোক্ত সকল পণ্য পাইকারী ও খুচরা বিক্রয় করা হয়
   </div>
 </div>
 
 <footer>
   <h3>ঠিকানা</h3>
-  <p>📍 সিটি সেন্টার, কাঁচাবাজারের পশ্চিম পাশে, কেরানীহাট, সাতকানিয়া, চট্টগ্রাম।</p>
+  <p>সিটি সেন্টার, কাঁচাবাজারের পশ্চিম পাশে</p>
+  <p>কেরানীহাট, চট্টগ্রাম</p>
 
   <div class="contact">
-    <p>📞 যোগাযোগ:</p>
-    <a href="tel:01881343336">০১৮৮১৩৪৩৩৩৬</a>
-    <a href="tel:01814972483">০১৮১৪৯৭২৪৮৩</a>
+    <p>যোগাযোগ:</p>
+    <a href="tel:01881343036">📞 01881-343036</a>
+    <a href="tel:01849792863">📞 01849-792863</a>
+    <a href="tel:01848256379">📞 01848-256379</a>
   </div>
-
-  <p><strong>মেসার্স ভাই ভাই ক্লথ স্টোর—আপনার পছন্দের পোশাকের সেরা ঠিকানা।</strong></p>
 </footer>
 
 </body>
