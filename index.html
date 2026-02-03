@@ -1,157 +1,145 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ভাই ভাই ক্লথ স্টোর | কেরানীহাট, চট্টগ্রাম</title>
-  <style>
-    body{
-      margin:0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background:#000;
-      color:#fff;
-    }
-    header{
-      padding:30px 15px;
-      text-align:center;
-      background:linear-gradient(135deg,#111,#000);
-    }
-    header h1{
-      font-size:42px;
-      margin:0;
-      color:#ff4d4d;
-    }
-    header p{
-      margin:10px 0 0;
-      font-size:18px;
-      color:#ddd;
-    }
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:30px 15px;
-    }
-    .section-title{
-      text-align:center;
-      font-size:28px;
-      margin-bottom:25px;
-      color:#ffd700;
-    }
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:15px;
-    }
-    .product{
-      background:#111;
-      border-radius:14px;
-      padding:18px;
-      text-align:center;
-      box-shadow:0 6px 20px rgba(0,0,0,.7);
-      cursor:pointer;
-      transition:transform .35s ease, box-shadow .35s ease;
-    }
-    .product:hover{
-      transform:translateY(-8px) scale(1.04);
-      box-shadow:0 12px 30px rgba(255,215,0,.35);
-    }
-    .product span{
-      display:block;
-      padding:12px;
-      border-radius:10px;
-      background:#1abc9c;
-      font-size:18px;
-      font-weight:600;
-      color:#000;
-      animation:pulse 2.5s infinite;
-    }
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(26,188,156,.7);} 
-      70%{box-shadow:0 0 0 15px rgba(26,188,156,0);} 
-      100%{box-shadow:0 0 0 0 rgba(26,188,156,0);} 
-    }
-    .product{
-      background:#111;
-      border-radius:12px;
-      padding:15px;
-      text-align:center;
-      box-shadow:0 4px 15px rgba(0,0,0,.6);
-    }
-    .product span{
-      display:block;
-      padding:10px;
-      border-radius:8px;
-      background:#1abc9c;
-      font-size:18px;
-      font-weight:600;
-      color:#000;
-    }
-    .product.alt span{ background:#3498db; }
-    .product.orange span{ background:#f39c12; }
-    .product.green span{ background:#2ecc71; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ভাই ভাই ক্লথ স্টোর | কেরানীহাট, চট্টগ্রাম</title>
 
-    .wholesale{
-      margin:50px 0 30px;
-      text-align:center;
-      font-size:20px;
-      color:#fff;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
 
-    footer{
-      background:#111;
-      padding:25px 15px;
-      text-align:center;
-    }
-    footer h3{
-      margin:0 0 10px;
-      color:#ff4d4d;
-    }
-    footer p{
-      margin:6px 0;
-      color:#ddd;
-      font-size:16px;
-    }
-    .contact{
-      margin-top:15px;
-      font-size:18px;
-    }
-    .contact a{
-      color:#25D366;
-      text-decoration:none;
-      margin:0 8px;
-      display:inline-block;
-    }
-  .logo-wrap{margin-bottom:15px;}
+header{
+  text-align:center;
+  padding:30px 15px;
+  background:linear-gradient(135deg,#111,#000);
+}
+
 .logo{
   width:120px;
-  height:auto;
-  animation: zoomRotate 3s infinite ease-in-out;
+  margin-bottom:15px;
+  animation:logoAnim 3s infinite ease-in-out;
 }
-@keyframes zoomRotate{
+
+@keyframes logoAnim{
   0%{transform:scale(.85);opacity:0;}
-  60%{transform:scale(1.05);opacity:1;}
-  100%{transform:scale(1);opacity:1;}
+  50%{transform:scale(1.1);opacity:1;}
+  100%{transform:scale(1);opacity:.9;}
 }
-  50%{transform:scale(1.15) rotate(5deg);opacity:1;}
-  100%{transform:scale(1) rotate(0deg);opacity:0.7;}
+
+header h1{
+  font-size:42px;
+  color:#ff4d4d;
+  margin:0;
 }
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:999;align-items:center;justify-content:center;}
-.modal img{max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 0 30px rgba(255,215,0,.5);}
-.modal.close-area{cursor:pointer;}
+
+header p{
+  margin-top:10px;
+  font-size:18px;
+  color:#ddd;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:30px 15px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:25px;
+  color:#ffd700;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+
+.product{
+  background:#111;
+  padding:18px;
+  border-radius:14px;
+  text-align:center;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.product:hover{
+  transform:translateY(-6px) scale(1.04);
+  box-shadow:0 0 25px rgba(255,215,0,.4);
+}
+
+.product span{
+  display:block;
+  padding:12px;
+  border-radius:10px;
+  font-weight:600;
+  color:#000;
+  background:#1abc9c;
+}
+
+.alt span{background:#3498db;}
+.orange span{background:#f39c12;}
+.green span{background:#2ecc71;}
+
+.wholesale{
+  margin:40px 0;
+  text-align:center;
+  font-size:20px;
+}
+
+footer{
+  background:#111;
+  padding:25px 15px;
+  text-align:center;
+}
+
+footer h3{color:#ff4d4d;}
+footer p{color:#ddd;}
+
+.contact a{
+  color:#25D366;
+  text-decoration:none;
+  display:inline-block;
+  margin:6px;
+  font-size:18px;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  align-items:center;
+  justify-content:center;
+}
+
+.modal img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo-wrap">
-    <img src="logo.png" alt="ভাই ভাই ক্লথ স্টোর লোগো" class="logo" />
-  </div>
+  <img src="logo.png" class="logo" alt="ভাই ভাই ক্লথ স্টোর">
   <h1>ভাই ভাই ক্লথ স্টোর</h1>
-  <p>বিশ্বাসের সাথে পাইকারী ও খুচরা কাপড়ের বিশ্বস্ত প্রতিষ্ঠান</p>
+  <p>বিশ্বাসের সাথে পাইকারী ও খুচরা কাপড়</p>
 </header>
 
 <div class="container">
   <h2 class="section-title">আমাদের পণ্যসমূহ</h2>
+
   <div class="products">
     <div class="product"><span>বিয়ের শাড়ী</span></div>
     <div class="product alt"><span>পাটি শাড়ী</span></div>
@@ -164,7 +152,7 @@
   </div>
 
   <div class="wholesale">
-    👉 উপরোক্ত সকল পণ্য পাইকারী ও খুচরা বিক্রয় করা হয়
+    👉 সকল পণ্য পাইকারী ও খুচরা বিক্রয় করা হয়
   </div>
 </div>
 
@@ -174,43 +162,11 @@
   <p>কেরানীহাট, চট্টগ্রাম</p>
 
   <div class="contact">
-    <p>যোগাযোগ:</p>
     <a href="tel:01881343036">📞 01881-343036</a>
     <a href="tel:01849792863">📞 01849-792863</a>
     <a href="tel:01848256379">📞 01848-256379</a>
   </div>
 </footer>
 
-<div class="modal" id="imgModal" onclick="closeModal()">
-  <img id="modalImg" src="" alt="Product Image" />
-</div>
-
-<script>
-  // product image system
-  const productImages = {
-    "বিয়ের শাড়ী":"images/biyer-saree.jpg",
-    "পাটি শাড়ী":"images/pati-saree.jpg",
-    "টাঙ্গাইল শাড়ী":"images/tangail-saree.jpg",
-    "পাবনা শাড়ী":"images/pabna-saree.jpg",
-    "হোসিয়ারী":"images/hosiari.jpg",
-    "লুঙ্গি / গামছা":"images/lungi.jpg",
-    "থান কাপড়":"images/than.jpg",
-    "থ্রি পিস":"images/three-piece.jpg"
-  };
-
-  document.querySelectorAll('.product').forEach(item=>{
-    item.addEventListener('click',()=>{
-      const name = item.innerText.trim();
-      if(productImages[name]){
-        document.getElementById('modalImg').src = productImages[name];
-        document.getElementById('imgModal').style.display='flex';
-      }
-    });
-  });
-
-  function closeModal(){
-    document.getElementById('imgModal').style.display='none';
-  }
-</script>
 </body>
 </html>
